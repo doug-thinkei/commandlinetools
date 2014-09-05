@@ -1,7 +1,7 @@
 #To show the whole history of all log information. 
-git log --graph --oneline --all
-
-
+git log --graph --oneline --all#Can I merge after this? 
+#Can I merge after this? 
+#Can I merge after this? 
 #To remove all branches.
 #Need to first checkout to 'development' branch. 
 
@@ -9,6 +9,7 @@ for i in `git branch | grep -v 'development'`; do git branch -D $i; done;
 
 
 #Can I merge after this? 
+#I am adding something 
 
 git log --graph --decorate --oneline 
 
