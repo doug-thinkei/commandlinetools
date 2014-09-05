@@ -7,4 +7,6 @@ git log --graph --oneline --all
 
 for i in `git branch | grep -v 'development'`; do git branch -D $i; done;
 
+#test
+
 
