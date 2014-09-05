@@ -7,6 +7,8 @@ git log --graph --oneline --all#Can I merge after this?
 
 for i in `git branch | grep -v 'development'`; do git branch -D $i; done;
 
+#test
+
 
 #Can I merge after this? 
 #I am adding something 
