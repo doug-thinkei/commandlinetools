@@ -10,3 +10,8 @@ for i in `git branch | grep -v 'development'`; do git branch -D $i; done;
 #test
 
 
+#Can I merge after this? 
+
+git log --graph --decorate --oneline 
+
+#Can I merge after this? 
