@@ -2,7 +2,10 @@
 git log --graph --oneline --all
 
 
-#To remove all branches.
+#To remove all blaba branches.
+
+dfs
+# This really mess up.
 #Need to first checkout to 'development' branch. 
 
 for i in `git branch | grep -v 'development'`; do git branch -D $i; done;
@@ -10,3 +13,4 @@ for i in `git branch | grep -v 'development'`; do git branch -D $i; done;
 #test
 
 
+# This really mess up.
