@@ -8,4 +8,8 @@ git log --graph --oneline --all
 for i in `git branch | grep -v 'development'`; do git branch -D $i; done;
 
 
+#Can I merge after this? 
+
 git log --graph --decorate --oneline 
+
+#Can I merge after this? 
