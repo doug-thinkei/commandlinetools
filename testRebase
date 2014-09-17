@@ -1,3 +1,5 @@
+FIX CONFLICT with branE 
+<<<<<<< HEAD
 ZZZZMMMMMZZZZin master first and second
 ZZZZZZZZMMMMMMMMMMMMMMMin master second 
 
@@ -12,3 +14,5 @@ in brF and
 Fixed and something more again. 
 create new trouble for rebase.  conflicts in testRebase and going to continue rebase. 
 Later changea agin
+=======
+>>>>>>> branE
