@@ -1,5 +1,1 @@
-within Master TestI also change rebase 
-dfsomething and add lines. 
-dfsadfsafds
-
-This should not allow auto merge and has to rebase. as branE is based on master. 
+Fixed conflicts in testRebase and going to continue rebase. 
