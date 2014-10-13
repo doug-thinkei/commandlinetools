@@ -1,0 +1,4 @@
+curl -X GET -H "X-TrackerToken: $TOKEN" "https://www.pivotaltracker.com/services/v5/projects/$PROJECT_ID/stories?filter=accepted_since%3A10%2F01%2F2014%20includedone%3Atrue" > result
+
+accpted_since:10/01/2014 includedone=true 
+
