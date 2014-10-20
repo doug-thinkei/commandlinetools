@@ -1,0 +1,60 @@
+[
+  {
+    "kind": "story",
+    "id": 75875218,
+    "created_at": "2014-07-29T08:35:48Z",
+    "updated_at": "2014-10-15T15:54:39Z",
+    "accepted_at": "2014-08-18T13:27:04Z",
+    "estimate": 0,
+    "story_type": "feature",
+    "name": "Style guide using consistent form control aesthetics",
+    "description": "Apply attached style guide to each module",
+    "current_state": "accepted",
+    "requested_by_id": 929967,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/75875218",
+    "owner_ids": [
+      1348786
+    ],
+    "labels": [
+
+    ],
+    "owned_by_id": 1348786
+  },
+  {
+    "kind": "story",
+    "id": 74924978,
+    "created_at": "2014-07-14T04:07:02Z",
+    "updated_at": "2014-10-15T07:24:13Z",
+    "estimate": 2,
+    "story_type": "feature",
+    "name": "Allow to delete management notes in employee files",
+    "description": "Allow the user to delete management notes in the employee file page (/memberships/:id)\n\nOnly owner/employer, manager of that employee or the author can use this feature.\n\n**Scenario: an employee can't see Management Notes written by their manager/admin/owner**\nGiven Mickey Mouse is a manager/admin/owner of Duffy Duck \nAnd Mickey wrote some management notes about Duffy Duck\nWhen Duffy Duck turns to Employee file of himself\nThen he should not see these management note.  \n\n**Scenario: a manager can't see Management Notes written by their manager/admin/owner**\nGiven Mickey Mouse is a manager/admin/owner of Duffy Duck\nAnd Duffy Duck is the manager of Peter Parker\nAnd Mickey wrote some management notes about Duffy Duck\nWhen Duffy Duck turns to Employee file of himself\nThen he should not see these management note. \n-- currently he can read, edit and delete these comments. \n\n**Scenario: a manager/admin/owner can see Management Notes of an employee under their management, but not editing**\nGiven Mickey Mouse is a manager/admin/owner of Duffy Duck\nAnd Peter Parker is  another manager/admin/owner of Duffy Duck\nAnd Mickey wrote management note about Duffy Duck\nWhen Peter Parker turns to Employee file of Duffy Duck\nThen he should be able to see these management note. \nBut he should not be able to edit/delete these management note. \n-- currently he can edit and delete these comments. ",
+    "current_state": "finished",
+    "requested_by_id": 1266530,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/74924978",
+    "owner_ids": [
+      1348788
+    ],
+    "labels": [
+      {
+        "id": 5433179,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "employee files",
+        "created_at": "2013-04-11T06:18:07Z",
+        "updated_at": "2013-04-11T06:18:07Z"
+      },
+      {
+        "id": 7370724,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "management notes",
+        "created_at": "2013-12-29T21:45:46Z",
+        "updated_at": "2013-12-29T21:45:46Z"
+      }
+    ],
+    "owned_by_id": 1348788
+  }
+]
