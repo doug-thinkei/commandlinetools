@@ -2,3 +2,21 @@ curl -X GET -H "X-TrackerToken: $TOKEN" "https://www.pivotaltracker.com/services
 
 accpted_since:10/01/2014 includedone=true 
 
+PROJECT_ID=764785
+TOKEN=8ceef86156a4a35dcee69a07ce9b1d03
+
+--------Update a story----------
+--------Story
+--------ENDPOINT /projects/{project_id}/stories/{story_id}
+--------GET Returns the specified story.
+--------PUT Updates a story.
+--------DELETE Deletes a story. 
+export TOKEN='your Pivotal Tracker API token'
+export PROJECT_ID=99
+
+curl -X PUT -H "X-TrackerToken: $TOKEN" -H "Content-Type: application/json" -d '{"labels":[{"name":"newnew"},{"name":"labellabel"},{"id":2010}]}' "https://www.pivotaltracker.com/services/v5/projects/$PROJECT_ID/stories/555"
+
+CURRENT_STATE="accepted"
+STORY_ID=80196106
+
+curl -X PUT -H "X-TrackerToken: $TOKEN" -H "Content-Type: application/json" -d '{"current_state":$CURRENT_STATE }' "https://www.pivotaltracker.com/services/v5/projects/$PROJECT_ID/stories/$STORY_ID"

@@ -17,3 +17,6 @@ git log --graph --decorate --oneline
 
 #zeus backend job command  
 zeus rake jobs:work
+
+#rake task to send notification. 
+rake member_sending_notification

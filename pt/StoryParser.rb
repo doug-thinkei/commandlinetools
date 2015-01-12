@@ -2,10 +2,10 @@ require 'rubygems'
 require 'json'
 require 'pp'
 
-file = File.read('pt/result.test')
+file = File.read('result')
 arrStorys = JSON.parse(file)
 length = arrStorys.length
-puts length
+puts "We are processing #{length} records .."
 
 #Creating arrays to store #feature, #Defects and #Task (Chore) respectively. 
 
@@ -16,26 +16,55 @@ tasks = Array.new()
 
 #For loop -- for each stroy-- start from here. 
 arrStorys.each do |story|
-	story_type = story['story_type']
-	if story_type != nil and story_type === 'feature'
-		print story['kind'] + " ";  puts story['id']
-		features << story
-	elsif story_type != nil and story_type === 'bug'
-		defects << story
-	elsif story_type != nil and story_type === 'chore'
-		tasks << story
+	current_state = story['current_state']
+	if current_state == 'accepted' or current_state = 'finished'
+		story_type = story['story_type']
+		if 
+			if story_type != nil and story_type === 'feature'
+				features << story
+			elsif story_type != nil and story_type === 'bug'
+				defects << story
+			elsif story_type != nil and story_type === 'chore'
+				tasks << story
+			end
+
+		end
 	end
 end
-puts "Defects.length: #{defects.length} "
+
+puts "Features.length: #{features.length} "
 puts "tasks.length: #{tasks.length} "
-tasks << "something else"
-#features.each { |x| puts x } 
+puts "defects length:#{defects.length}"
 
-## Print generated information to screen. 
 
+def processRecord(records)
+	records.each { |tmp|
+		id = tmp['id']
+		title = tmp['name']
+		story_id = tmp['id']
+	#Collect labels for current story
+	labels = Array.new()
+	labels_input = tmp['labels']
+	labels_input.each{ |tmp_label|
+		labels << tmp_label['name']
+	}
+	#puts "Label size: #{labels.length}"
+	puts "\t#{title} [\##{id}] \t #{labels} " 
+}
+end
 #Feature part
-puts "Features: "
+puts "\nFeatures: "
+processRecord(features)
+puts "\nDefects"
+processRecord(defects)
+puts "\nTasks"
+processRecord(tasks)
 
+=begin
+	
+rescue Exception => e
+	
+end
 features.each { |tmp|
 	title = tmp['name']
 	story_id = tmp['id']
@@ -49,5 +78,6 @@ features.each { |tmp|
 
 	puts "\t#{title}\t #{labels}\t[\##{tmp['id']} ] " 
 }
+=end
 
-#For loop -- for each stroy-- ends here 
+
