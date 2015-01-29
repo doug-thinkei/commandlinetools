@@ -1,0 +1,899 @@
+[
+  {
+    "kind": "story",
+    "id": 75875218,
+    "created_at": "2014-07-29T08:35:48Z",
+    "updated_at": "2014-10-15T15:54:39Z",
+    "accepted_at": "2014-08-18T13:27:04Z",
+    "estimate": 0,
+    "story_type": "feature",
+    "name": "Style guide using consistent form control aesthetics",
+    "description": "Apply attached style guide to each module",
+    "current_state": "accepted",
+    "requested_by_id": 929967,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/75875218",
+    "owner_ids": [
+      1348786
+    ],
+    "labels": [
+
+    ],
+    "owned_by_id": 1348786
+  },
+  {
+    "kind": "story",
+    "id": 74924978,
+    "created_at": "2014-07-14T04:07:02Z",
+    "updated_at": "2014-10-15T07:24:13Z",
+    "estimate": 2,
+    "story_type": "feature",
+    "name": "Allow to delete management notes in employee files",
+    "description": "Allow the user to delete management notes in the employee file page (/memberships/:id)\n\nOnly owner/employer, manager of that employee or the author can use this feature.\n\n**Scenario: an employee can't see Management Notes written by their manager/admin/owner**\nGiven Mickey Mouse is a manager/admin/owner of Duffy Duck \nAnd Mickey wrote some management notes about Duffy Duck\nWhen Duffy Duck turns to Employee file of himself\nThen he should not see these management note.  \n\n**Scenario: a manager can't see Management Notes written by their manager/admin/owner**\nGiven Mickey Mouse is a manager/admin/owner of Duffy Duck\nAnd Duffy Duck is the manager of Peter Parker\nAnd Mickey wrote some management notes about Duffy Duck\nWhen Duffy Duck turns to Employee file of himself\nThen he should not see these management note. \n-- currently he can read, edit and delete these comments. \n\n**Scenario: a manager/admin/owner can see Management Notes of an employee under their management, but not editing**\nGiven Mickey Mouse is a manager/admin/owner of Duffy Duck\nAnd Peter Parker is  another manager/admin/owner of Duffy Duck\nAnd Mickey wrote management note about Duffy Duck\nWhen Peter Parker turns to Employee file of Duffy Duck\nThen he should be able to see these management note. \nBut he should not be able to edit/delete these management note. \n-- currently he can edit and delete these comments. ",
+    "current_state": "finished",
+    "requested_by_id": 1266530,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/74924978",
+    "owner_ids": [
+      1348788
+    ],
+    "labels": [
+      {
+        "id": 5433179,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "employee files",
+        "created_at": "2013-04-11T06:18:07Z",
+        "updated_at": "2013-04-11T06:18:07Z"
+      },
+      {
+        "id": 7370724,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "management notes",
+        "created_at": "2013-12-29T21:45:46Z",
+        "updated_at": "2013-12-29T21:45:46Z"
+      }
+    ],
+    "owned_by_id": 1348788
+  },
+  {
+    "kind": "story",
+    "id": 76114582,
+    "created_at": "2014-08-01T08:43:28Z",
+    "updated_at": "2014-10-15T15:56:46Z",
+    "estimate": 0,
+    "story_type": "feature",
+    "name": "Safety module",
+    "description": "Safety module for 75875218\n**schema review: after an incident is reported, it should allow editing and deleting**\nGiven Mickey Mouse is an employee\nAnd he reported an accident\nWhen he navigates to My Incident, \nThen he should be able to see the reported incident\nAnd he is able to delete/edit the incident. \n-- Current he can't find the reported incident \n  and he can't delete/edit the incident. ",
+    "current_state": "finished",
+    "requested_by_id": 929967,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/76114582",
+    "owner_ids": [
+      17511
+    ],
+    "labels": [
+      {
+        "id": 9073186,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "form aesthetics",
+        "created_at": "2014-07-30T12:13:10Z",
+        "updated_at": "2014-07-30T12:13:10Z"
+      }
+    ],
+    "owned_by_id": 17511
+  },
+  {
+    "kind": "story",
+    "id": 76266998,
+    "created_at": "2014-08-04T11:09:42Z",
+    "updated_at": "2014-10-15T08:49:37Z",
+    "story_type": "bug",
+    "name": "Fix alignment of action buttons",
+    "description": "Steps to reproduce:\n- Login as an admin/owner/manager\n- Navigate to `/employee_files`",
+    "current_state": "delivered",
+    "requested_by_id": 929967,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/76266998",
+    "owner_ids": [
+      1348788
+    ],
+    "labels": [
+      {
+        "id": 5382041,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "ui",
+        "created_at": "2013-04-04T09:14:41Z",
+        "updated_at": "2013-04-04T09:14:41Z"
+      }
+    ],
+    "owned_by_id": 1348788
+  },
+  {
+    "kind": "story",
+    "id": 76920636,
+    "created_at": "2014-08-14T00:45:39Z",
+    "updated_at": "2014-10-15T07:53:41Z",
+    "estimate": 8,
+    "story_type": "feature",
+    "name": "Setup performance reviews",
+    "description": "Additional context found in #78432118\n\nPerformance Reviews is a new module. For the interim the only way to access this module should be through a direct URL as we do not want to expose an incomplete product to customers\n\n**Scenario: notifications to employees for new Review Periods**\nGiven I create a new Review Period\nAnd employee Mickey Mouse is added to the Review Period\nWhen I press Save\nThen Mickey Mouse should receive an email notification with the following email copy:\n```\nYou have been added to the following performance review called \"[review_name]\" for the period of [start date] - [end date]. Please take some time to read the performance criteria as you will be required to enter your responses by [end date]. Below is the link to access your performance reviews:\n\n[URL TBD]\n```\n\n**Scenario: notifications to new employees for existing Review Periods**\nGiven I Review Period exists\nAnd employee Daffy Duck is on the Review Period\nWhen I add Mickey Mouse to the Review Period\nAnd I press Save\nThen Daffy Duck should not receive an email notification\nAnd Mickey Mouse should receive an email notification with the following email copy:\n```\nYou have been added to the following performance review called \"[review_name]\" for the period of [start date] - [end date]. Please take some time to read the performance criteria as you will be required to enter your responses by [end date]. Below is the link to access your performance reviews:\n\n[URL TBD]\n```\n\n**Scenario: notifications to employees being removed from existing Review Periods**\nGiven I Review Period exists\nAnd employee Daffy Duck is on the Review Period\nWhen I remove Daffy Duck from the Review Period\nAnd I press Save\nThen Daffy Duck should receive an email notification with the following web copy:\n```\nYou have been removed from the performance review called \"[review_name]\" for the period of [start date] - [end date]. Please contact your manager if you believe this is a mistake.\n```\n\n**Scenario: \"Remind\" notifications**\nGiven I Review Period exists\nAnd employee Daffy Duck is on the Review Period\nWhen I remove Daffy Duck from the Review Period\nAnd I press Save\nThen Daffy Duck should receive an email notification with the following web copy:\n```\nYou have been removed from the performance review called \"[review_name]\" for the period of [start date] - [end date]. Please contact your manager if you believe this is a mistake.\n```\n\n**Scenario: notifications when a Performance Period is approaching**\nGiven I Review Period exists for 01/01/2014 - 31/03/2014\nAnd the reminder days is 14 days\nWhen the current day is 31/03/2014 - 14 days\nThen the system should send all employees assigned to the Review Period an email notification with the following web copy:\n```\nThis is a reminder that you have [reminder days] left to complete your performance review called \"[review_name]\" for the period of [start date] - [end date]. Below is the link to access your performance reviews:\n\n[URL TBD]\n```",
+    "current_state": "started",
+    "requested_by_id": 929967,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/76920636",
+    "owner_ids": [
+      1410024
+    ],
+    "labels": [
+      {
+        "id": 8986440,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "performance reviews",
+        "created_at": "2014-07-21T07:35:59Z",
+        "updated_at": "2014-07-21T07:35:59Z"
+      }
+    ],
+    "owned_by_id": 1410024
+  },
+  {
+    "kind": "story",
+    "id": 77772466,
+    "created_at": "2014-08-28T00:54:19Z",
+    "updated_at": "2014-10-15T14:46:12Z",
+    "story_type": "bug",
+    "name": "Employee File \"HR Documents\" enhancements",
+    "description": "**Scenario: employee file tabs should display when updating HR Documents**\nGiven Fred is an Admin\nAnd he is viewing the \"HR Documents\" tab (/memberships/:id)\nWhen he clicks \"Add New\" button\nThen the employee file tabs should still be visible (Screenshot displays what is currently happening) \n\n**Scenario: employee file HR Documents redirect**\nGiven Fred is an Admin\nAnd he is viewing the \"HR Documents\" tab (/memberships/:id)\nWhen he clicks \"Add new\" button\nAnd clicks \"Cancel\" button\nThen he should be redirect to the the employee file (/memberships/:id)\nAnd the HR Documents tabs should be toggled\n- Currently the redirect is going to the Dashboard",
+    "current_state": "finished",
+    "requested_by_id": 1392864,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/77772466",
+    "owner_ids": [
+      1348788
+    ],
+    "labels": [
+      {
+        "id": 5451873,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "aesthetics",
+        "created_at": "2013-04-13T13:37:01Z",
+        "updated_at": "2013-04-13T13:37:01Z"
+      },
+      {
+        "id": 5433179,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "employee files",
+        "created_at": "2013-04-11T06:18:07Z",
+        "updated_at": "2013-04-11T06:18:07Z"
+      }
+    ],
+    "owned_by_id": 1348788
+  },
+  {
+    "kind": "story",
+    "id": 76253604,
+    "created_at": "2014-08-04T05:35:23Z",
+    "updated_at": "2014-10-15T17:18:07Z",
+    "estimate": 5,
+    "story_type": "feature",
+    "name": "Scheduled Tasks",
+    "description": "**Scenario: notifications to assignees**\nGiven I create/update a scheduled task\nWhen I assign it to Mickey Mouse\nAnd I press Save\nThen Mickey Mouse should receive an email notification (create a postageapp template)\n\n**Scenario: notifications for declined tasks**\nGiven I am assigned a schedule task created by Daffy Duck\nWhen I Decline the task\nAnd enter the reason \"Sorry, I am on holidays so I can't do this\"\nAnd I press Save\nThen Daffy Duck should receive an email notification (create a postageapp template)\n\n**Scenario: notifications for completed tasks**\nGiven I am assigned a schedule task created by Daffy Duck\nWhen I complete the task\nThen Daffy Duck should receive an email notification (create a postageapp template)\n\n**Scenario: notifications to multiple assignees**\nGiven I create/update a scheduled task\nWhen I assign it to Mickey Mouse and Duffy Duck\nAnd I press Save\nThen both Duffy Duck and Mickey Mouse should receive an email notification (create a postageapp template)",
+    "current_state": "finished",
+    "requested_by_id": 1392952,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/76253604",
+    "owner_ids": [
+      1328410
+    ],
+    "labels": [
+      {
+        "id": 6116183,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "customer request",
+        "created_at": "2013-07-17T01:47:54Z",
+        "updated_at": "2013-07-17T01:47:54Z"
+      },
+      {
+        "id": 8563634,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "kogan",
+        "created_at": "2014-05-30T01:33:41Z",
+        "updated_at": "2014-05-30T01:33:41Z"
+      },
+      {
+        "id": 8602006,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "mos",
+        "created_at": "2014-06-04T15:07:01Z",
+        "updated_at": "2014-06-04T15:07:01Z"
+      }
+    ],
+    "owned_by_id": 1328410
+  },
+  {
+    "kind": "story",
+    "id": 78537146,
+    "created_at": "2014-09-10T06:27:37Z",
+    "updated_at": "2014-10-15T14:42:56Z",
+    "estimate": 5,
+    "story_type": "feature",
+    "name": "Employment History",
+    "description": "**Nuke fields from Employment Details in favour of new data model:**\n- Employment type\n- Position",
+    "current_state": "finished",
+    "requested_by_id": 929967,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/78537146",
+    "owner_ids": [
+      1348788
+    ],
+    "labels": [
+
+    ],
+    "owned_by_id": 1348788
+  },
+  {
+    "kind": "story",
+    "id": 78449300,
+    "created_at": "2014-09-09T10:12:40Z",
+    "updated_at": "2014-10-15T14:55:21Z",
+    "estimate": 3,
+    "story_type": "feature",
+    "name": "Timesheet management enhancements",
+    "current_state": "finished",
+    "requested_by_id": 929967,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/78449300",
+    "owner_ids": [
+      17511
+    ],
+    "labels": [
+
+    ],
+    "owned_by_id": 17511
+  },
+  {
+    "kind": "story",
+    "id": 79501524,
+    "created_at": "2014-09-25T06:29:49Z",
+    "updated_at": "2014-10-15T08:22:59Z",
+    "estimate": 1,
+    "story_type": "feature",
+    "name": "Update LeaveCategory synchronisation",
+    "description": "The following field also needs to be synced to KP and imported from KP:\n`accruesLeave`",
+    "current_state": "delivered",
+    "requested_by_id": 1313512,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/79501524",
+    "owner_ids": [
+      926101
+    ],
+    "labels": [
+      {
+        "id": 9569248,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "keypay",
+        "created_at": "2014-09-29T23:44:33Z",
+        "updated_at": "2014-09-29T23:44:33Z"
+      },
+      {
+        "id": 9569414,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "leave category",
+        "created_at": "2014-09-30T00:23:20Z",
+        "updated_at": "2014-09-30T00:23:20Z"
+      },
+      {
+        "id": 9451656,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "mamamia",
+        "created_at": "2014-09-16T04:53:29Z",
+        "updated_at": "2014-09-16T04:53:29Z"
+      },
+      {
+        "id": 9569416,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "ticket #134",
+        "created_at": "2014-09-30T00:23:20Z",
+        "updated_at": "2014-09-30T00:23:20Z"
+      }
+    ],
+    "owned_by_id": 926101
+  },
+  {
+    "kind": "story",
+    "id": 78985540,
+    "created_at": "2014-09-17T07:26:09Z",
+    "updated_at": "2014-10-15T08:19:16Z",
+    "story_type": "bug",
+    "name": "\"Emergency contacts\" tab is missing from employee file",
+    "description": "**Emergency contacts tab should display for employees**\nGiven Mickey Mouse is an employee\nAnd Mickey is not an admin or an owner or a manager\nWhen Mickey goes to My File\nThen he should see the Emergency contacts tab",
+    "current_state": "delivered",
+    "requested_by_id": 1313512,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/78985540",
+    "owner_ids": [
+      1348788
+    ],
+    "labels": [
+      {
+        "id": 9466880,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "careertrackers",
+        "created_at": "2014-09-17T11:14:27Z",
+        "updated_at": "2014-09-17T11:14:27Z"
+      },
+      {
+        "id": 9466882,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "emergency contacts",
+        "created_at": "2014-09-17T11:14:27Z",
+        "updated_at": "2014-09-17T11:14:27Z"
+      }
+    ],
+    "owned_by_id": 1348788
+  },
+  {
+    "kind": "story",
+    "id": 78169012,
+    "created_at": "2014-09-04T03:46:13Z",
+    "updated_at": "2014-10-15T08:33:29Z",
+    "story_type": "bug",
+    "name": "Missing partial employee_onboarding/sender_signs_contract_modal",
+    "description": "TracedError reported from New Relic\nApplication: employmenthero\nhttps://rpm.newrelic.com/accounts/190045/applications/978688/traced_errors/2110264399\n\nTimestamp: 09/04/14 23:23:03\nException Class: ActionView::Template::Error\nError Action: EmployeeOnboardingController#update_signatory\nUri: /employee_onboarding/update_signatory\n\n```\nMissing partial employee_onboarding/sender_signs_contract_modal, application/sender_signs_contract_modal with {:locale=>[:en], :formats=>[:js, :html], :handlers=>[:erb, :builder, :haml, :rabl]}. Searched in:\n  * \"/app/app/views\"\n  * \"/app/vendor/bundle/ruby/1.9.1/gems/bootstrap-kaminari-views-0.0.2/app/views\"\n  * \"/app/vendor/bundle/ruby/1.9.1/gems/kaminari-0.13.0/app/views\"\n  * \"/app/vendor/bundle/ruby/1.9.1/gems/twitter-bootstrap-rails-2.2.7/app/views\"\n  * \"/app/vendor/bundle/ruby/1.9.1/gems/devise-2.0.4/app/views\"\n```",
+    "current_state": "delivered",
+    "requested_by_id": 929967,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/78169012",
+    "owner_ids": [
+      926101
+    ],
+    "labels": [
+
+    ],
+    "owned_by_id": 926101
+  },
+  {
+    "kind": "story",
+    "id": 79926590,
+    "created_at": "2014-10-02T05:39:36Z",
+    "updated_at": "2014-10-15T07:53:40Z",
+    "estimate": 3,
+    "story_type": "feature",
+    "name": "Performance Review Settings - Templates",
+    "description": "This is similar to the one found in #76920636\nIt is similar to and uses templates created in System admin portal #79925582\n\nHere the organisation is able to view the pre-populated templates and create their own templates. ",
+    "current_state": "finished",
+    "requested_by_id": 1392952,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/79926590",
+    "owner_ids": [
+      1410024
+    ],
+    "labels": [
+      {
+        "id": 8986440,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "performance reviews",
+        "created_at": "2014-07-21T07:35:59Z",
+        "updated_at": "2014-07-21T07:35:59Z"
+      }
+    ],
+    "owned_by_id": 1410024
+  },
+  {
+    "kind": "story",
+    "id": 79784024,
+    "created_at": "2014-09-30T14:06:50Z",
+    "updated_at": "2014-10-15T08:25:37Z",
+    "story_type": "bug",
+    "name": "Display hours in 2 decimal places in leave request reports",
+    "current_state": "delivered",
+    "requested_by_id": 929967,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/79784024",
+    "owner_ids": [
+      1348788
+    ],
+    "labels": [
+
+    ],
+    "owned_by_id": 1348788
+  },
+  {
+    "kind": "story",
+    "id": 79926666,
+    "created_at": "2014-10-02T05:42:50Z",
+    "updated_at": "2014-10-15T07:26:53Z",
+    "estimate": 3,
+    "story_type": "feature",
+    "name": "Performance Review Settings - Review Periods",
+    "description": "This is similar to the one found in #76920636\nIt uses templates from #79926590",
+    "current_state": "started",
+    "requested_by_id": 1392952,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/79926666",
+    "owner_ids": [
+      1410024
+    ],
+    "labels": [
+      {
+        "id": 8986440,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "performance reviews",
+        "created_at": "2014-07-21T07:35:59Z",
+        "updated_at": "2014-07-21T07:35:59Z"
+      }
+    ],
+    "owned_by_id": 1410024
+  },
+  {
+    "kind": "story",
+    "id": 80431066,
+    "created_at": "2014-10-10T03:50:26Z",
+    "updated_at": "2014-10-15T08:09:56Z",
+    "story_type": "bug",
+    "name": "Employee using multiple organisations can change Employment Details",
+    "description": "**Scenario: Employee using multiple organisations can change Employment Details**\nGiven Mickey Mouse is an employee of Organisation A\nAnd Mickey is an admin of Organisation B\nAnd Mickey is an owner of Organisation C\nWhen Mickey goes to edit his Employment Details in Organisation A (memberships/XXXX/edit)\nThen Mickey can **should not** be able to edit the following fields:\n-Employing Entity\n-Code\n-Location\n-Employment Type\n-Position\n-Primary manager\n-Other manager\n-Start date\n-Termination date\n-Probation length\nBut Mickey **should be able** to edit the following:\n-Company email\n-Company mobile\n-Company landlinegi",
+    "current_state": "delivered",
+    "requested_by_id": 1313512,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/80431066",
+    "owner_ids": [
+      926101
+    ],
+    "labels": [
+      {
+        "id": 9661796,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "data corruption",
+        "created_at": "2014-10-10T03:50:25Z",
+        "updated_at": "2014-10-10T03:50:25Z"
+      },
+      {
+        "id": 6042543,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "permissions",
+        "created_at": "2013-07-05T01:38:44Z",
+        "updated_at": "2013-07-05T01:38:44Z"
+      }
+    ],
+    "owned_by_id": 926101
+  },
+  {
+    "kind": "story",
+    "id": 80432990,
+    "created_at": "2014-10-10T05:18:11Z",
+    "updated_at": "2014-10-15T06:25:52Z",
+    "estimate": 3,
+    "story_type": "feature",
+    "name": "Security Groups",
+    "description": "Part one of Security Permissions\n-----------------------------------------\nCreating groups so that permissions can be assigned to multiple individuals or teams. \n\nThis is the first stage of the security permissions module.\n\n-----------------------------------------\nIn Add Group and Edit Group modals\nGroup Name is mandatory\nAssign team and Assign employees are based of Chosen Gems(Multi select) the individuals and teams in the organisation.",
+    "current_state": "started",
+    "requested_by_id": 1379882,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/80432990",
+    "owner_ids": [
+      1410024
+    ],
+    "labels": [
+      {
+        "id": 9685190,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "csa",
+        "created_at": "2014-10-13T23:21:40Z",
+        "updated_at": "2014-10-13T23:21:40Z"
+      },
+      {
+        "id": 6116183,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "customer request",
+        "created_at": "2013-07-17T01:47:54Z",
+        "updated_at": "2013-07-17T01:47:54Z"
+      },
+      {
+        "id": 9685194,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "deus ex machina",
+        "created_at": "2014-10-13T23:21:51Z",
+        "updated_at": "2014-10-13T23:21:51Z"
+      },
+      {
+        "id": 8563634,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "kogan",
+        "created_at": "2014-05-30T01:33:41Z",
+        "updated_at": "2014-05-30T01:33:41Z"
+      },
+      {
+        "id": 9685192,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "lloyd group",
+        "created_at": "2014-10-13T23:21:45Z",
+        "updated_at": "2014-10-13T23:21:45Z"
+      },
+      {
+        "id": 6042543,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "permissions",
+        "created_at": "2013-07-05T01:38:44Z",
+        "updated_at": "2013-07-05T01:38:44Z"
+      },
+      {
+        "id": 9675104,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "requires secondary uat from dave",
+        "created_at": "2014-10-13T01:22:14Z",
+        "updated_at": "2014-10-13T01:22:14Z"
+      },
+      {
+        "id": 8054086,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "security",
+        "created_at": "2014-03-27T05:01:11Z",
+        "updated_at": "2014-05-20T00:38:31Z"
+      },
+      {
+        "id": 9685196,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "sky traders",
+        "created_at": "2014-10-13T23:22:05Z",
+        "updated_at": "2014-10-13T23:22:05Z"
+      }
+    ],
+    "owned_by_id": 1410024
+  },
+  {
+    "kind": "story",
+    "id": 80434822,
+    "created_at": "2014-10-10T06:26:58Z",
+    "updated_at": "2014-10-15T15:10:32Z",
+    "estimate": 3,
+    "story_type": "feature",
+    "name": "Policy PDF Uploads",
+    "description": "For users to upload their own policies. \n-------------------------------------------\nGiven Mickey Mouse is an owner\nAnd he click on \"Upload your own policy\" button\nThen he should see upload form\nAnd he is able to upload new policy and update name for the file\n\n**Scenario: Selected file is not uploaded. **\nGiven Mickey is an admin\nAnd he uploaded his own file test01.pdf\nAnd he shared his file \nWhen he clicked on the link on policies page\nThen he can't find the file. \n",
+    "current_state": "finished",
+    "requested_by_id": 1379882,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/80434822",
+    "owner_ids": [
+      1328410
+    ],
+    "labels": [
+      {
+        "id": 7396996,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "documents",
+        "created_at": "2014-01-06T07:00:00Z",
+        "updated_at": "2014-01-06T07:00:00Z"
+      },
+      {
+        "id": 7292482,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "policies",
+        "created_at": "2013-12-20T02:28:58Z",
+        "updated_at": "2013-12-20T02:28:58Z"
+      }
+    ],
+    "owned_by_id": 1328410
+  },
+  {
+    "kind": "story",
+    "id": 80433182,
+    "created_at": "2014-10-10T05:28:12Z",
+    "updated_at": "2014-10-15T14:39:25Z",
+    "estimate": 3,
+    "story_type": "feature",
+    "name": "Email Notification Settings - Company Settings ",
+    "description": "In Email Notification Settings, the company can set the Email Notification Frequency and Assign each notification to different types of users. \n\nThis story links to the following story:\nEmail Notification Settings - Employee view #80433236",
+    "current_state": "started",
+    "requested_by_id": 1392952,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/80433182",
+    "owner_ids": [
+      1348788
+    ],
+    "labels": [
+      {
+        "id": 6353830,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "notifications",
+        "created_at": "2013-08-21T09:12:41Z",
+        "updated_at": "2013-08-21T09:12:41Z"
+      }
+    ],
+    "owned_by_id": 1348788
+  },
+  {
+    "kind": "story",
+    "id": 80534240,
+    "created_at": "2014-10-13T07:40:31Z",
+    "updated_at": "2014-10-15T08:04:05Z",
+    "story_type": "bug",
+    "name": "Fix tax declaration aesthetics",
+    "description": "Checkboxes aren't aligned when the width of the browser is 1920 px.",
+    "current_state": "finished",
+    "requested_by_id": 929967,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/80534240",
+    "owner_ids": [
+      1466958
+    ],
+    "labels": [
+
+    ],
+    "owned_by_id": 1466958
+  },
+  {
+    "kind": "story",
+    "id": 80605710,
+    "created_at": "2014-10-13T23:57:55Z",
+    "updated_at": "2014-10-15T08:58:39Z",
+    "story_type": "bug",
+    "name": "Missing radio buttons when create/edit Request Leave",
+    "description": "Missing checkbox when create/edit Request Leave (screenshots) on live. \nHotfix tonight ",
+    "current_state": "delivered",
+    "requested_by_id": 1392864,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/80605710",
+    "owner_ids": [
+      1466958
+    ],
+    "labels": [
+      {
+        "id": 5451873,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "aesthetics",
+        "created_at": "2013-04-13T13:37:01Z",
+        "updated_at": "2013-04-13T13:37:01Z"
+      },
+      {
+        "id": 9685556,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "leave requests",
+        "created_at": "2014-10-14T00:09:07Z",
+        "updated_at": "2014-10-14T00:09:07Z"
+      }
+    ],
+    "owned_by_id": 1466958
+  },
+  {
+    "kind": "story",
+    "id": 80550294,
+    "created_at": "2014-10-13T13:13:51Z",
+    "updated_at": "2014-10-15T01:45:38Z",
+    "story_type": "bug",
+    "name": "NoMethodError: undefined method `memberships' for nil:NilClass",
+    "description": "[Airbrake] employmenthero\nError message: NoMethodError: undefined method `memberships' for nil:NilClass.\nEnvironment: Production\nOccurred at: 2014/10/05 04:58:49 UTC\nMore details at: https://herokuapp6707447herokucom.airbrake.io/projects/94035/groups/1259810624288143206\n\nI think we should gracefully redirect the user to the login page and with an appropriate flash message\n\nGiven I created a new employee file for Mickey Mouse\nAnd the system emails Mickey Mouse an invite email\nAnd I delete Mickey Mouse's employee file\nWhen Mickey Mouse clicks on the invite email link\nThen his web browser shall redirect him to the EH sign in page",
+    "current_state": "finished",
+    "requested_by_id": 929967,
+    "external_id": "1259810624288143206",
+    "integration_id": 30328,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/80550294",
+    "owner_ids": [
+      1466958
+    ],
+    "labels": [
+
+    ],
+    "owned_by_id": 1466958
+  },
+  {
+    "kind": "story",
+    "id": 80613812,
+    "created_at": "2014-10-14T03:58:36Z",
+    "updated_at": "2014-10-15T07:42:22Z",
+    "story_type": "bug",
+    "name": "UI broken on Development branch -- continue",
+    "description": "UI broken found on development branch: \nThis branch is from #78545646, which has been closed in favour of this one. \n \nIssues found on development: \n* Add Induction Content wrong button (screenshot)\n* Receipts page UI issue (screenshot)\n*  Safety report incident. It has been addressed in multiple pull requests\n* Problem when try to create a duplicate Time Sheet Entry on the same day. After updated the duplicated time entry, got a page in the shadow. ",
+    "current_state": "finished",
+    "requested_by_id": 1392864,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/80613812",
+    "owner_ids": [
+      1466960
+    ],
+    "labels": [
+      {
+        "id": 5451873,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "aesthetics",
+        "created_at": "2013-04-13T13:37:01Z",
+        "updated_at": "2013-04-13T13:37:01Z"
+      }
+    ],
+    "owned_by_id": 1466960
+  },
+  {
+    "kind": "story",
+    "id": 76110342,
+    "created_at": "2014-08-01T06:02:22Z",
+    "updated_at": "2014-10-15T01:34:06Z",
+    "estimate": 3,
+    "story_type": "feature",
+    "name": "Unsubscribe a client",
+    "description": "Currently I am manually running this script in the console. I would like this to be a button that we can press in the system admin portal that will do the following:\n- Downgrade the current subscription to the trial plan\n- Delete the eWay recurring event\n- Delete the payment card\n- Audit these events\n\n```\n    # Have you deleted the eway recurring payments?\n\n    org = Organisation.find(1839)\n    free_plan = SubscriptionPlan.find(7)\n    eway = EwayAPI.new(org.payment_card, \"\", org.owner, org.account.subscription_plan, org)\n    successful_deletion = eway.delete_rebill_event\n\n    # Create new Agreement: downgrade to FREE subscription\n    Agreement.create(organisation: org, subscription_plan: free_plan)\n\n    org.account.update_attribute(:subscription_plan, free_plan)\n\n    org.payment_card.try(:delete)\n    org.update_attributes(rebill_id: nil,\n                      rebill_start_date: nil,\n                      rebill_end_date: nil,\n                      rebill_recur_amt: nil,\n                      active_subscription: true,\n                      payment_card_id: nil)\n```",
+    "current_state": "started",
+    "requested_by_id": 929967,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/76110342",
+    "owner_ids": [
+      1410024
+    ],
+    "labels": [
+
+    ],
+    "owned_by_id": 1410024
+  },
+  {
+    "kind": "story",
+    "id": 80620002,
+    "created_at": "2014-10-14T06:02:17Z",
+    "updated_at": "2014-10-15T14:58:31Z",
+    "story_type": "chore",
+    "name": "Unable to benefit from CircleCIs parallelism until we remove the tests that cause deadlocks",
+    "description": "https://circleci.com/gh/Thinkei/employment-hero/5391",
+    "current_state": "started",
+    "requested_by_id": 929967,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/80620002",
+    "owner_ids": [
+      1466958
+    ],
+    "labels": [
+
+    ],
+    "owned_by_id": 1466958
+  },
+  {
+    "kind": "story",
+    "id": 79842202,
+    "created_at": "2014-10-01T02:46:08Z",
+    "updated_at": "2014-10-15T10:24:42Z",
+    "estimate": 3,
+    "story_type": "feature",
+    "name": "Manage pay runs",
+    "current_state": "started",
+    "requested_by_id": 929967,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/79842202",
+    "owner_ids": [
+      1466960
+    ],
+    "labels": [
+      {
+        "id": 6116183,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "customer request",
+        "created_at": "2013-07-17T01:47:54Z",
+        "updated_at": "2013-07-17T01:47:54Z"
+      },
+      {
+        "id": 7152494,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "managed payroll",
+        "created_at": "2013-11-29T04:34:33Z",
+        "updated_at": "2013-11-29T04:34:33Z"
+      }
+    ],
+    "owned_by_id": 1466960
+  },
+  {
+    "kind": "story",
+    "id": 80699136,
+    "created_at": "2014-10-14T23:15:28Z",
+    "updated_at": "2014-10-15T10:18:30Z",
+    "story_type": "bug",
+    "name": "Employee overview alignment",
+    "description": "Fix employee overview alignment (screenshot)",
+    "current_state": "finished",
+    "requested_by_id": 1392864,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/80699136",
+    "owner_ids": [
+      1466958
+    ],
+    "labels": [
+      {
+        "id": 5451873,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "aesthetics",
+        "created_at": "2013-04-13T13:37:01Z",
+        "updated_at": "2013-04-13T13:37:01Z"
+      }
+    ],
+    "owned_by_id": 1466958
+  },
+  {
+    "kind": "story",
+    "id": 80707818,
+    "created_at": "2014-10-15T03:02:51Z",
+    "updated_at": "2014-10-15T07:53:20Z",
+    "story_type": "bug",
+    "name": "Wrong warning message with onborading",
+    "description": "**Scenario: error warning message during onboarding**\nGiven Mickey Mouse is onboarding a new employee\nWhen he filled the first page ` COMPLETE HIRING DETAILS OF NEW EMPLOYEE`\nAnd he clicks **Continue**\nThen he gets a warning message `Please review the problems below:`\nWhen he clicks **Continue** again, \nThen he goes to the next page without problem.\n-- the warning message should be removed. ",
+    "current_state": "unstarted",
+    "requested_by_id": 1392864,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/80707818",
+    "owner_ids": [
+      1466958
+    ],
+    "labels": [
+      {
+        "id": 9712182,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "error message",
+        "created_at": "2014-10-15T03:02:50Z",
+        "updated_at": "2014-10-15T03:02:50Z"
+      },
+      {
+        "id": 7463732,
+        "project_id": 764785,
+        "kind": "label",
+        "name": "onboarding",
+        "created_at": "2014-01-14T06:25:44Z",
+        "updated_at": "2014-02-21T02:11:31Z"
+      }
+    ],
+    "owned_by_id": 1466958
+  },
+  {
+    "kind": "story",
+    "id": 80782338,
+    "created_at": "2014-10-15T21:39:58Z",
+    "updated_at": "2014-10-15T21:39:58Z",
+    "story_type": "bug",
+    "name": "XeroGateway::OAuth::TokenInvalid: Token DTWCIV7A96QFBH0KMXOOURUHSU6P4Y does not match an expected ACCESS token",
+    "description": "[Airbrake] employmenthero\nError message: XeroGateway::OAuth::TokenInvalid: Token DTWCIV7A96QFBH0KMXOOURUHSU6P4Y does not match an expected ACCESS token.\nEnvironment: Production\nOccurred at: 2014/10/15 21:39:35 UTC\nMore details at: https://herokuapp6707447herokucom.airbrake.io/projects/94035/groups/1267562086766296077",
+    "current_state": "unscheduled",
+    "requested_by_id": 929967,
+    "external_id": "1267562086766296077",
+    "integration_id": 30328,
+    "project_id": 764785,
+    "url": "https://www.pivotaltracker.com/story/show/80782338",
+    "owner_ids": [
+
+    ],
+    "labels": [
+
+    ]
+  }
+]
