@@ -1,0 +1,166 @@
+/*
+ * NOTE: Ensure all css is prefixed with #main (where applicable), so that it only changes the brand content
+ */
+/*
+    These styles come from the original brand
+*/
+#main h1,
+#main h2,
+#main h3,
+#main h4,
+#main h5,
+#main h6 {
+    color:#a70000;
+}
+
+#main h2,
+#main h3,
+#main h4 {
+    margin-top: 1em;
+    text-transform: none;
+}
+
+#main h2 {
+    font-size: 1.5em;
+}
+
+#main h3 {
+    font-size: 1.17em;
+}
+
+#main div.producttitle {
+    color:#a70000;
+}
+
+#main .section h1.title {
+    color:#a70000;
+}
+
+#main .formalpara div.title {
+    color:#a70000;
+}
+
+#main table {
+    font-size: 100%;
+    border:1px solid #aaa;
+    width: 100%;
+}
+
+#main table th {
+    background-color:#900 !important;
+    text-align: left !important;
+    color: white !important;
+}
+
+#main table th p:first-child,
+#main table td p:first-child,
+#main table li p:first-child,
+#main table th div.para:first-child,
+#main table td div.para:first-child,
+#main table li div.para:first-child {
+    margin-top: 0px;
+    padding-top: 0px;
+    display: inline;
+}
+
+#main table tr.even td {
+    background-color:#f5f5f5;
+}
+
+/*#main .revhistory table th {
+    color:#a70000;
+}*/
+
+#main .titlepage .edition {
+    color: #a70000;
+}
+
+#main span.remark{
+    background-color: #ffff00;
+}
+
+#main .home{
+    color: #a70000;
+}
+
+/*
+    Some styles taken from the old Publican 3 brand
+*/
+#main .revhistory table {
+    background-color:transparent;
+    border-color:#fff;
+    padding:0px;
+    margin: 0;
+    border-collapse:collapse;
+    border-style:none;
+}
+
+#main .revhistory td {
+    text-align :left;
+    padding:0px;
+    border: none;
+    border-top: 1px solid #fff;
+    font-weight: bold;
+}
+
+#main .revhistory .simplelist td {
+    font-weight: normal;
+}
+
+#main .revhistory .simplelist {
+    margin-bottom: 1.5em;
+    margin-left: 1em;
+}
+
+#main .revhistory table th {
+    display: none;
+}
+
+#main tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+#main table table td {
+    background-color: white;
+}
+
+#navigation {
+    display: none;
+}
+
+#main .docnav li.next {
+    right: 12px;
+}
+
+#main .docnav li.previous {
+    left: 12px;
+}
+
+#main .toc > dl {
+    margin-top: 1em;
+}
+
+#main .authorgroup h3 {
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+
+#main .authorgroup h4 {
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+
+/* BZ #1110611 */
+#main p code,
+#main .para code {
+    display: inline-block;
+}
+
+/* Hack to fix empty anchors rendering blocks in webkit */
+#main a:empty {
+    display: inline;
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}

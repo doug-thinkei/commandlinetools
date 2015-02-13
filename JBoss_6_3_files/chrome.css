@@ -1,0 +1,374 @@
+@import url("site_overrides.css");
+
+.menu .bottom_versions .title span {
+    background-color: #EEEEEE;
+    display: inline-block;
+    left: -20px;
+    line-height: 30px;
+    margin: 0;
+    padding-top: 4px;
+    position: relative;
+    width: 100%;
+}
+body[dir="rtl"] .menu .bottom_versions .title span {
+    right: -20px;
+}
+.menu span a, #menu span a {
+    color: white;
+}
+#menu {
+    background-color: #666666;
+    color: #EEEEEE;
+    font-size: 13px;
+    height: 30px !important;
+    left: 0;
+    line-height: 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+body[dir="rtl"] #menu {
+    right: 0;
+}
+#menu ul {
+    list-style: none outside none !important;
+    margin: 0;
+    min-width: 100%;
+    padding: 0;
+}
+
+#menu ul li {
+    margin-top: 0em;
+    margin-left: 0;
+    margin-right: 0;
+    text-indent: 25px;
+}
+#menu a {
+    border: medium none !important;
+    color: #444444;
+    display: block;
+    text-decoration: none;
+    white-space: pre;
+}
+
+#menu ul a {
+    color: #DDDDDD;
+}
+#menu a:hover {
+    background-color: #666666;
+    color: #FFFFFF !important;
+}
+
+.breadcrumb {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#langauge_menu {
+    background-color: red;
+    left: 0;
+    position: absolute;
+    width: 50px;
+    z-index: 9;
+}
+body[dir="rtl"] #langauge_menu {
+    right: 0;
+}
+#product_menu {
+    display: inline-block;
+    z-index: 19;
+}
+#product_menu_list {
+    position: absolute;
+    top: 10px;
+    z-index: 99;
+}
+#version_menu {
+    display: inline-block;
+    z-index: 18;
+}
+#version_menu_list {
+    position: absolute;
+    top: 10px;
+    z-index: 98;
+}
+#book_menu {
+    display: inline-block;
+    z-index: 17;
+}
+#book_menu_list {
+    position: absolute;
+    top: 10px;
+    z-index: 97;
+}
+#book_lang_menu, #lang_menu_2, #book_format_menu {
+    background-color: transparent;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    float: right;
+    height: 100%;
+    padding-right: 10px;
+    position: relative;
+/*    right: 240px; */
+    z-index: 19;
+}
+body[dir="rtl"] #book_lang_menu, body[dir="rtl"] #lang_menu_2, body[dir="rtl"] #book_format_menu {
+    float: left;
+    left: 240px;
+    padding-left: 10px;
+    padding-right: 0;
+    right: auto;
+}
+#lang_menu_2:before, #book_format_menu:before, #book_lang_menu:before {
+    border-color: #666666 transparent transparent;
+    border-style: solid;
+    border-width: 6px 6px 0;
+    content: "";
+    display: block;
+    height: 0;
+    position: absolute;
+    right: 6px;
+    top: 11px;
+    width: 0;
+}
+body[dir="rtl"] #lang_menu_2:before, body[dir="rtl"] #book_format_menu:before, body[dir="rtl"] #book_lang_menu:before {
+    left: 6px;
+    right: auto;
+}
+#lang_menu_2 div, #book_format_menu div, #book_lang_menu div {
+    color: #555555;
+    margin: 0 0 -20px;
+    padding: 0 20px 0 10px;
+}
+body[dir="rtl"] #lang_menu_2 div, body[dir="rtl"] #book_format_menu div, body[dir="rtl"] #book_lang_menu div {
+    padding-left: 20px;
+    padding-right: 10px;
+}
+#book_lang_menu_list, #lang_menu_list, #book_format_menu_list {
+    background-color: rgba(110, 110, 110, 0.95) !important;
+    line-height: 32px;
+    margin-top: 0 !important;
+    position: absolute;
+    text-decoration: none;
+    top: 32px;
+    z-index: 99;
+}
+#book_lang_menu_list a, #lang_menu_list a, #book_format_menu_list a {
+    text-decoration: none;
+}
+#book_lang_menu, #menu, .breadcrumb, #book_format_menu {
+    height: 32px !important;
+}
+#menu {
+    background-color: #EEEEEE;
+    box-shadow: 0 -1px 8px #888888, 0 -30px 30px -20px #CCCCCC inset;
+    z-index: 999;
+}
+body[dir="rtl"] #menu {
+    box-shadow: 0 -1px 8px #888888, 0 -20px 30px -30px #CCCCCC inset;
+}
+.breadcrumb {
+    background-color: #EEEEEE;
+    color: #444444;
+    cursor: pointer !important;
+    display: block;
+    float: left;
+    line-height: 32px;
+    position: relative;
+    text-indent: 32px;
+}
+body[dir="rtl"] .breadcrumb {
+    float: right;
+}
+.breadcrumb:before {
+    border-color: transparent transparent transparent rgba(0, 0, 0, 0.2);
+    border-style: solid;
+    border-width: 16px 0 16px 16px;
+    content: "";
+    display: block;
+    height: 0;
+    position: absolute;
+    right: -16px;
+    top: 0;
+    width: 0;
+    z-index: 99;
+}
+body[dir="rtl"] .breadcrumb:before {
+    border-color: transparent rgba(0, 0, 0, 0.2) transparent transparent;
+    border-width: 16px 16px 16px 0;
+    left: -16px;
+    right: auto;
+}
+.breadcrumb:after {
+    border-color: transparent transparent transparent #EEEEEE;
+    border-style: solid;
+    border-width: 16px 0 16px 16px;
+    content: "";
+    display: block;
+    height: 0;
+    position: absolute;
+    right: -15px;
+    top: 0;
+    width: 0;
+    z-index: 99;
+}
+body[dir="rtl"] .breadcrumb:after {
+    border-color: transparent #EEEEEE transparent transparent;
+    border-width: 16px 16px 16px 0;
+    left: -15px;
+    right: auto;
+}
+.breadcrumb:hover {
+    background-color: #666666 !important;
+    color: #FFFFFF;
+}
+.breadcrumb:hover:after {
+    border-color: transparent transparent transparent #666666;
+}
+body[dir="rtl"] .breadcrumb:hover:after {
+    border-color: transparent #666666 transparent transparent;
+}
+.breadcrumb ul {
+    background-color: rgba(110, 110, 110, 0.95) !important;
+    left: 0;
+    margin: 22px 0 !important;
+    text-indent: 16px;
+    top: 0;
+}
+body[dir="rtl"] .breadcrumb ul {
+    left: auto;
+    right: 0;
+}
+.breadcrumb ul li {
+    margin: 0;
+    padding: 0;
+}
+.breadcrumb ul a {
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    padding-right: 16px;
+    text-decoration: none;
+}
+body[dir="rtl"] .breadcrumb ul a {
+    padding-left: 16px;
+    padding-right: 0;
+}
+.breadcrumb ul a:hover {
+    background-color: #333333;
+}
+
+
+#book_menu, #product_menu, #version_menu {
+}
+#book_lang_menu, #book_format_menu {
+    background-color: #EEEEEE;
+}
+#book_lang_menu > div, #book_format_menu > div {
+    color: #444444;
+    text-indent: 8px;
+}
+#book_lang_menu:hover, #book_lang_menu:hover > div, #book_format_menu:hover > div, #book_format_menu:hover {
+    background-color: #666666;
+    color: white;
+}
+#search_box {
+    background-color: transparent;
+    padding: 0;
+    position: relative;
+    float: right;
+    width: 190px;
+    z-index: 9;
+}
+body[dir="rtl"] #search_box {
+    left: 40px;
+    right: auto;
+}
+#search_box input[type="text"] {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    display: block;
+    float: left;
+    height: 26px;
+    margin: 2px 3px !important;
+    padding: 0;
+    width: 190px;
+}
+#search_box input[type="text"] {
+    float: right;
+}
+#search_box input[type="submit"] {
+    display: none;
+}
+#search_box:hover input[type="text"] {
+    background-color: #FFFFFF;
+    border-color: #444444;
+}
+#menu {
+    border-bottom: 1px solid #CCCCCC;
+    box-shadow: none;
+    position: fixed;
+}
+#book_lang_menu, #lang_menu_2, #book_format_menu {
+    background-color: transparent;
+    border: medium none !important;
+}
+.breadcrumb {
+    text-indent: 1em;
+}
+#book_lang_menu, #lang_menu_2, #book_format_menu {
+/*    right: 140px; */
+    z-index: 0;
+}
+#search_box, #search_box input[type="text"] {
+    text-indent: 0.5em;
+    transition: all 0.25s ease 0s;
+    width: 90px;
+}
+#search_box input[type="text"]:focus, #search_box input[type="text"]:hover {
+    width: 320px;
+}
+body #menu {
+    top: 0 !important;
+}
+#book_lang_menu:hover, #book_lang_menu:hover > div, #book_format_menu:hover > div, #book_format_menu:hover {
+    cursor: pointer;
+}
+#product_menu a {
+    font-size: 0.85em !important;
+    height: 2em;
+    line-height: 2em;
+}
+#product_menu ul, #book_menu ul, #version_menu ul, #lang_menu_2 ul {
+    background-color: pink;
+    display: block;
+    left: inherit;
+    margin-left: -0.9em !important;
+    max-height: 90%;
+    max-width: 70em !important;
+    min-width: 200px !important;
+    overflow: auto;
+    position: fixed !important;
+    top: 10px !important;
+}
+#lang_menu_2 ul {
+    top: 32px !important;
+}
+#lang_menu_list {
+    right: 2em;
+}
+body.menu_embeded {
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+.menu_embeded #title.hidden {
+    display: block;
+}
+.untranslated, .srcnewer {
+    font-style: italic;
+    background: none !important;
+} 
+ul.toc {
+    padding: 0;
+    margin: 0;
+}
